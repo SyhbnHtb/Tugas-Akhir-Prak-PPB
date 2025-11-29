@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import { User, Info } from "lucide-react";
 
-import "./dashboardpage.css";
+import "./DashboardPage.css";
 
 export default function DashboardPage() {
   const { user } = useAuth();
