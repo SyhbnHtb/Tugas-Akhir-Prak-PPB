@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext";
 
 import { useWatchlist } from "../hooks/useWatchlist";
 
-import "./WatchListPage.css";
+import "./WatchlistPage.css";
 
 export default function WatchlistPage() {
   const navigate = useNavigate();
