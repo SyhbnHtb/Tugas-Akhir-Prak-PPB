@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Home, Layers, Heart, User, Info, LogIn, LogOut } from "lucide-react";
 
 import { useAuth } from "../../context/AuthContext";
-import "./desktopnavbar.css";
+import "./DesktopNavbar.css";
 
 export default function DesktopNavbar() {
   const { user, logout } = useAuth();
