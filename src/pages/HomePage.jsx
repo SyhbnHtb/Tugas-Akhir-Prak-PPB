@@ -5,7 +5,7 @@ import BackgroundPattern from "../components/splash/BackgroundPattern";
 import FloatingElement from "../components/splash/FloatingElement";
 import HeroSection from "../components/home/HeroSection";
 import SearchBar from "../components/home/SearchBar";
-import AnimeCard from "../components/anime/animecard";
+import AnimeCard from "../components/anime/AnimeCard";
 import Footer from "../components/splash/Footer";
 
 import useAnimeList from "../hooks/useAnimeList";

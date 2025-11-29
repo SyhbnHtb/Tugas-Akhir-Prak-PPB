@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import AnimeCard from "../components/anime/animecard";
+import AnimeCard from "../components/anime/AnimeCard";
 import useAnimeByGenre from "../hooks/useAnimeByGenre";
 
-import genreList from "../data/genreList";   // ⬅️ IMPORT GENRE LIST
+import genreList from "../data/genreList";
 import "./GenrePage.css";
 
 export default function GenrePage() {
