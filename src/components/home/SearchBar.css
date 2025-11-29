@@ -1,0 +1,45 @@
+/* ================= SEARCH BAR CONTAINER ================= */
+.searchbar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 95%;
+  max-width: 620px;
+
+  padding: 16px 20px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(191, 161, 129, 0.35); /* gold soft */
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+
+/* Glow saat focus */
+.searchbar-container:focus-within {
+  border-color: #178582;
+  box-shadow: 0 0 18px rgba(23, 133, 130, 0.45); /* teal glow */
+}
+
+/* ================= ICON ================= */
+.searchbar-icon {
+  color: #BFA181; /* gold */
+  opacity: 0.9;
+}
+
+/* ================= INPUT FIELD ================= */
+.searchbar-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.searchbar-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}

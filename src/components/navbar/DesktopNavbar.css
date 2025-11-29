@@ -1,0 +1,91 @@
+.desktop-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba(10, 24, 40, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* LEFT: Brand */
+.nav-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #BFA181;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+/* RIGHT: Menu Items */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  gap: 26px;
+  flex-wrap: nowrap;
+}
+
+/* NAV LINKS */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #E8E8E8;
+  opacity: 0.85;
+  transition: 0.25s ease;
+}
+
+/* ACTIVE */
+.nav-link.active {
+  background: linear-gradient(135deg, #17858250, #0A182850);
+  border: 1px solid #178582;
+  color: #BFA181;
+  box-shadow: 0 4px 14px rgba(23, 133, 130, 0.35);
+  transform: translateY(-2px);
+}
+
+/* HOVER */
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ICON COLORS */
+.nav-link svg {
+  color: #BFA181;
+  transition: 0.25s ease-in-out;
+}
+
+.nav-link.active svg {
+  color: #178582;
+}
+
+/* BRAND WRAPPER */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGO */
+.nav-logo {
+  height: 38px;
+  width: 38px;
+  object-fit: contain;
+  user-select: none;
+}

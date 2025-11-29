@@ -1,0 +1,158 @@
+/* === PAGE Layout === */
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+  background: #0A1828;
+}
+
+/* === Background Gradient === */
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, #17858240, transparent 60%),
+              radial-gradient(circle at bottom right, #BFA18140, transparent 60%);
+  z-index: -3;
+}
+
+/* === ORBS === */
+.orb {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  filter: blur(120px);
+  border-radius: 50%;
+  animation: pulse 3s infinite alternate ease-in-out;
+}
+
+.orb-purple {
+  background: #17858255;
+  top: -140px;
+  left: -100px;
+}
+
+.orb-blue {
+  background: #BFA18155;
+  bottom: -140px;
+  right: -100px;
+}
+
+@keyframes pulse {
+  from { opacity: 0.6; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1.1); }
+}
+
+/* === LOGIN CARD === */
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(10, 24, 40, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(22px);
+  padding: 48px;
+  border-radius: 26px;
+  box-shadow: 0 14px 45px rgba(0,0,0,0.4);
+  animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === TITLE === */
+.login-card h1 {
+  text-align: center;
+  font-size: 34px;     /* lebih besar */
+  font-weight: 700;
+  color: #BFA181;
+  margin-bottom: 12px;
+}
+
+/* === SUBTITLE === */
+.login-card p {
+  text-align: center;
+  color: #e6e6e6;
+  margin-bottom: 30px;
+  font-size: 17px;     /* lebih besar */
+}
+
+/* === LABEL === */
+.login-card label {
+  color: #BFA181;
+  font-size: 16px;     /* lebih besar */
+  font-weight: 600;
+}
+
+/* === INPUT FIELD === */
+.login-card input {
+  width: 95%;
+  padding: 15px 18px;  /* sedikit lebih besar */
+  margin: 10px 0 22px;
+  font-size: 16px;     /* lebih besar */
+  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  transition: 0.25s;
+}
+
+.login-card input::placeholder {
+  color: #d3d3d3;
+}
+
+/* === BUTTON === */
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #178582, #0A1828);
+  color: white;
+  font-weight: 700;
+  font-size: 17px;   /* lebih besar */
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.login-card button:hover {
+  background: linear-gradient(135deg, #0F5F5D, #0A1828);
+  transform: translateY(-2px);
+}
+
+/* === ERROR TEXT === */
+.error {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: -4px;
+  margin-bottom: 14px;
+  font-size: 16px;   /* lebih besar */
+}
+
+/* === REGISTER LINK TEXT === */
+.register-text {
+  text-align: center;
+  margin-top: 24px;
+  color: #d5d5d5;
+  font-size: 16px;    /* lebih besar */
+}
+
+.register-text span {
+  color: #BFA181;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: 0.2s;
+}
+
+.register-text span:hover {
+  color: #d6c4a2;
+}

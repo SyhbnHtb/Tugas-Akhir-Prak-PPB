@@ -1,0 +1,23 @@
+.genre-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  background: rgba(23, 133, 130, 0.15); /* Soft Teal Glow */
+  color: #BFA181; /* Gold Text */
+  border: 1px solid #178582; /* Teal Border */
+
+  border-radius: 50px;
+  backdrop-filter: blur(4px);
+  margin-right: 6px;
+  margin-bottom: 6px;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.genre-tag:hover {
+  background: #178582;
+  color: #0A1828; /* Deep Navy Text */
+  transform: translateY(-2px);
+}

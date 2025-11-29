@@ -1,0 +1,90 @@
+/* ===== COLOR VARIABLES ===== */
+:root {
+  --dark-blue: #0A1828;
+  --teal: #178582;
+  --gold: #BFA181;
+  --white: #ffffff;
+
+  --text-primary: #e6e6e6;
+  --text-secondary: #b8c2d1;
+}
+
+/* ===== GLOBAL PAGE STYLE ===== */
+.dashboard-container {
+  min-height: 100vh;
+  background: var(--dark-blue);
+  padding: 100px 20px 40px;
+  font-family: "Inter", sans-serif;
+  color: var(--text-primary);
+}
+
+/* ===== HEADER ===== */
+.dashboard-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* ===== CARD BASE STYLE ===== */
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 22px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* CARD TITLE */
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* CARD CONTENT */
+.card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.card strong {
+  color: var(--gold);
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+  width: 100%;
+  padding: 13px;
+  background: var(--teal);
+  color: var(--white);
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #0f5f5d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(23,133,130,0.35);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .dashboard-container {
+    padding: 100px 60px;
+  }
+}

@@ -1,0 +1,248 @@
+:root {
+  --dark-blue: #0a1828;
+  --teal: #178582;
+  --gold: #bfa181;
+  --white: #f8f8f8;
+}
+
+/*  PAGE WRAPPER  */
+.editprofile-container {
+  background: var(--dark-blue);
+  min-height: 100vh;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  /* tambahan background decorative */
+  background: radial-gradient(circle at top, #112233 0%, #0a1828 60%);
+}
+
+/* HALAMAN TITLE */
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/*  BACK BUTTON  */
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-start;
+  margin-bottom: 25px;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
+
+/*  MAIN CARD  */
+.edit-card {
+  width: 100%;
+  max-width: 1150px;     /* dibuat lebih besar */
+  background: rgba(255, 255, 255, 0.08);
+  padding: 55px;         /* padding diperbesar */
+  border-radius: 25px;
+
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  gap: 60px;             /* jarak lebih besar */
+  animation: fadeIn 0.4s ease;
+}
+
+/*  FADE IN ANIMATION  */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  LEFT SECTION (PROFILE PIC)  */
+.left-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;   
+  min-height: 100%;
+}
+
+/* Avatar clickable */
+.profile-pic-wrapper {
+  width: 210px;      /* lebih besar */
+  height: 210px;
+  border-radius: 50%;
+  border: 3px solid var(--teal);
+  background: #1b2a3a;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-pic-wrapper:hover {
+  transform: scale(1.04);
+  border-color: var(--gold);
+}
+
+.profile-hint {
+  margin-top: 15px;
+  color: var(--gold);
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* Hidden input */
+#avatar-upload-input {
+  display: none;
+}
+
+/*  RIGHT SECTION  */
+.right-section {
+  width: 60%;
+}
+
+.edit-title {
+  color: var(--gold);
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: var(--gold);
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.input-group input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--teal);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  border-color: var(--gold);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/*  BUTTONS  */
+.bottom-buttons {
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Cancel */
+.cancel-btn {
+  padding: 13px 28px;
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+.cancel-btn:hover {
+  background: rgba(191, 161, 129, 0.18);
+}
+
+/* Save */
+.save-btn {
+  padding: 13px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, var(--teal), #0e5a57);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  box-shadow: 0 6px 16px rgba(23, 133, 130, 0.35);
+  transition: 0.25s;
+}
+
+.save-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.96;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 820px) {
+  .edit-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .edit-card {
+    max-width: 95%;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+  }
+
+  .bottom-buttons {
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+}
+
+.edit-subtitle {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold);
+}

@@ -1,0 +1,169 @@
+/*  PAGE CONTAINER  */
+.genre-page-container {
+  background: linear-gradient(180deg, #0A1828 0%, #0f2235 50%, #0A1828 100%);
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 180px;
+  position: relative;
+  color: #EAEAEA;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+/*  FLOATING DECORATIVE LIGHTS  */
+.genre-bg-light-1,
+.genre-bg-light-2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.25;
+  z-index: 1;
+  animation: floatAnim 8s ease-in-out infinite;
+}
+
+.genre-bg-light-1 {
+  top: 10%;
+  left: -5%;
+  width: 180px;
+  height: 180px;
+  background: #178582cc;
+}
+
+.genre-bg-light-2 {
+  bottom: 10%;
+  right: -5%;
+  width: 220px;
+  height: 220px;
+  background: #BFA181cc;
+}
+
+@keyframes floatAnim {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+/*  TOP SECTION (GENRE + SEARCH)  */
+.genre-top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 32px;
+  margin-left: 20px;
+  position: relative;
+  z-index: 50;
+}
+
+/* Wrapper untuk genre chips */
+.genre-chips-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+  z-index: 50;
+}
+
+/*  GENRE CHIPS  */
+.genre-chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1.8px solid rgba(191, 161, 129, 0.55);
+  background: rgba(255, 255, 255, 0.08);
+  color: #EAEAEA;
+  backdrop-filter: blur(10px);
+  transition: 0.25s ease-in-out;
+}
+
+.genre-chip:hover {
+  background: #BFA181;
+  color: #0A1828;
+  border-color: #BFA181;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(191, 161, 129, 0.35);
+}
+
+.genre-chip.active {
+  background: #BFA181;
+  color: #0A1828;
+  border-color: #BFA181;
+  box-shadow: 0 6px 14px rgba(191, 161, 129, 0.45);
+}
+
+/* Remove horizontal scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/*  SEARCH BAR  */
+.genre-search {
+  max-width: 95%;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(191, 161, 129, 0.55);
+  color: white;
+  transition: 0.25s;
+}
+
+.genre-search::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.genre-search:focus {
+  outline: none;
+  border-color: #178582;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 16px rgba(23, 133, 130, 0.5);
+}
+
+/*  SUBTITLE LABEL  */
+.genre-label {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.genre-label span {
+  color: #BFA181;
+  font-weight: 700;
+}
+
+/*  ANIME GRID (Same as HomePage.css)  */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .anime-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/*  EMPTY MESSAGE  */
+.not-found {
+  text-align: center;
+  margin-top: 60px;
+  color: #9FA8B8;
+  font-size: 18px;
+}
+
+/*  ANIMATION  */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.6s ease-out;
+}

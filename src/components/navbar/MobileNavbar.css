@@ -1,0 +1,85 @@
+/* Wrapper utama */
+.mobile-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 10px 0;
+
+  background: rgba(20, 20, 30, 0.55); /* dark transparent */
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  display: block;
+}
+
+/* Hide on desktop */
+@media (min-width: 768px) {
+  .mobile-navbar {
+    display: none;
+  }
+}
+
+/* Content flex */
+.mobile-nav-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Default nav item */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+  color: #b5b5c9;
+  text-decoration: none;
+
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-item span {
+  margin-top: 4px;
+}
+
+/* Hover effect */
+.nav-item:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+}
+
+/* Active state base */
+.active {
+  color: white;
+  font-weight: 600;
+  transform: translateY(-4px);
+}
+
+/* Glow per menu */
+.home-active svg {
+  stroke: #4ca5ff;
+  filter: drop-shadow(0 0 6px #4ca5ff);
+}
+
+.genre-active svg {
+  stroke: #a855f7;
+  filter: drop-shadow(0 0 6px #a855f7);
+}
+
+.watchlist-active svg {
+  stroke: #ff4f6d;
+  filter: drop-shadow(0 0 6px #ff4f6d);
+}
+
+.profile-active svg {
+  stroke: #4ade80;
+  filter: drop-shadow(0 0 6px #4ade80);
+}
+
+/* Active text color */
+.home-active span { color: #4ca5ff; }
+.genre-active span { color: #a855f7; }
+.watchlist-active span { color: #ff4f6d; }
+.profile-active span { color: #4ade80; }

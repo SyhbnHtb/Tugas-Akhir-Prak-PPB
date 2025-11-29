@@ -1,0 +1,66 @@
+/* === GLOBAL WRAPPER === */
+.watchlist-container {
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #0A1828, #05101b 60%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === PAGE TITLE === */
+.watchlist-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #BFA181;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 8px rgba(191, 161, 129, 0.25);
+  text-align: left;
+}
+
+/* === EMPTY STATE === */
+.empty-state {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.empty-state p:first-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #BFA181;
+}
+
+.empty-state p:last-child {
+  font-size: 0.95rem;
+  margin-top: 5px;
+  color: #c6c6c6;
+}
+
+/* === GRID ANIME === */
+.watchlist-grid {
+  margin-top: 20px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* === ANIME CARD OVERRIDE (Sedikit efek golden glow) === */
+.anime-card {
+  transition: 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(191, 161, 129, 0.25);
+}
+
+.anime-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(23, 133, 130, 0.35),
+              0 0 12px rgba(191, 161, 129, 0.4);
+  border-color: #BFA181;
+  cursor: pointer;
+}
