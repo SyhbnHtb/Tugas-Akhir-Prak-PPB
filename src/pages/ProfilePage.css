@@ -1,4 +1,4 @@
-/* === PAGE WRAPPER === */
+/*  PAGE WRAPPER  */
 .profile-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #0A1828, #0f2439 60%);
@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-/* === LARGE PROFILE CARD === */
+/*  PROFILE CARD  */
 .profile-card {
   background: #112533;
   width: 100%;
@@ -48,7 +48,7 @@
   transform: translateY(-6px);
 }
 
-/* === LEFT COLUMN: AVATAR === */
+/*  LEFT COLUMN  */
 .profile-left {
   width: 32%;
   display: flex;
@@ -85,7 +85,7 @@
   );
 }
 
-/* === RIGHT COLUMN === */
+/*  RIGHT COLUMN  */
 .profile-right {
   flex: 1;
 }
@@ -109,7 +109,7 @@
   color: #BFA181;
 }
 
-/* === EXTRA PROFILE INFO === */
+/*  EXTRA PROFILE INFO  */
 .profile-extra {
   margin-top: 35px;
   display: flex;
@@ -143,7 +143,7 @@
   color: #e6e6e6;
 }
 
-/* === BUTTONS === */
+/*  BUTTONS  */
 .profile-actions {
   margin-top: 40px;
   display: flex;
@@ -185,7 +185,7 @@
   box-shadow: 0 0 12px rgba(191,161,129,0.55);
 }
 
-/* === RESPONSIVE === */
+/*  RESPONSIVE  */
 @media (max-width: 900px) {
   .profile-card {
     flex-direction: column;
