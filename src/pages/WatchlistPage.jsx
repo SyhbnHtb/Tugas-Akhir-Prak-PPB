@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AnimeCard from "../components/anime/animecard";
+import AnimeCard from "../components/anime/AnimeCard";
 import PopupGuestWarning from "../components/popup/PopupGuestWarning";
 import { useAuth } from "../context/AuthContext";
 
